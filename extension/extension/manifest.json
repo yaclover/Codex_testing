@@ -1,0 +1,22 @@
+diff --git a//dev/null b/extension/manifest.json
+index 0000000000000000000000000000000000000000..17df832e2f0b3a141f36e679e68cacf8a576d547 100644
+--- a//dev/null
++++ b/extension/manifest.json
+@@ -0,0 +1,17 @@
++{
++  "name": "Send Selection to Google Docs",
++  "description": "Send selected text to a specified Google Document.",
++  "version": "1.0",
++  "manifest_version": 3,
++  "permissions": ["identity", "contextMenus", "activeTab", "storage"],
++  "oauth2": {
++    "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
++    "scopes": ["https://www.googleapis.com/auth/documents"]
++  },
++  "background": {
++    "service_worker": "background.js"
++  },
++  "action": {
++    "default_title": "Send to Google Docs"
++  }
++}
